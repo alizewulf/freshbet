@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #16161c;
+  --color-primary: #22222a;
+  --color-secondary: #0a0a0d;
+  --color-customorange: #ff4b26;
+  --color-customyellow: #ffa515;
+  --color-customdark: #18181f;
+  --color-customgray: #838389;
+  --color-custborder: #2a2f3c;
+  --text-md: 16px;
+  --text-customlg: 24px;
+  --radius-custom-md: 24px;
+  --radius-custom-lg: 32px;
+  --radius-custom-sm: 16px;
+  --radius-custom-xs: 8px;
+}
+
+.nav-text {
+  @apply text-[#FFFFFF] opacity-80 text-shadow-xs text-shadow-[#000000]/40;
+}
+
+.font-mediumbold {
+  font-weight: 650;
+}
+
+.font-custombold {
+  font-weight: 750;
+}
+
+.sidebar-listing {
+@apply gap-5 flex flex-row text-customgray items-center cursor-pointer hover:bg-customdark rounded-custom-lg p-3 hover:text-white border-2 border-transparent duration-300 hover:border-custborder
+}
+
+.transaction-list {
+  @apply border-2 bg-primary rounded-xs border-[#000000]/20 mt-6 overflow-hidden;
+}
+
+.transaction-row {
+  @apply grid px-14 py-4 items-center gap-4;
+  grid-template-columns: 1.1fr 1fr 1.3fr 1fr 1.1fr;
+}
+
+.transaction-row > * {
+  min-width: 0;
+}
+
+.transaction-row > :last-child {
+  justify-self: start;
+}
+
+.transaction-row + .transaction-row {
+  @apply border-t border-[#000000]/20;
+}
